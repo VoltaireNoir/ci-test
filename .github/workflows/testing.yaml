@@ -18,10 +18,9 @@ jobs:
     - uses: actions/checkout@v3
     - name: Set up Homebrew
       id: set-up-homebrew
-      uses: Homebrew/actions/setup-homebrew@master
     - name: Build
       run: cargo build --verbose
     - name: Run tests
       run: |
-        su
-        /home/ubuntu/.cargo/bin/cargo test --verbose
+        sudo echo "entering elevated privilage"
+        sudo /home/ubuntu/.cargo/bin/cargo test --verbose
