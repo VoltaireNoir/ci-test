@@ -21,6 +21,5 @@ jobs:
     - name: Build
       run: cargo build --verbose
     - name: Run tests
-      run: |
-        sudo echo "entering elevated privilage"
-        sudo /home/ubuntu/.cargo/bin/cargo test --verbose
+      run: sudo echo "entering elevated privilage"
+      run: sudo /home/ubuntu/.cargo/bin/cargo test --verbose
