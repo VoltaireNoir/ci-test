@@ -22,4 +22,6 @@ jobs:
     - name: Build
       run: cargo build --verbose
     - name: Run tests
-      run: sudo -S /home/ubuntu/.cargo/bin/cargo test --verbose
+      run: |
+        su
+        /home/ubuntu/.cargo/bin/cargo test --verbose
